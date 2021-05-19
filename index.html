@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Pagamento</title>
+        <link rel="stylesheet" href="scss/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    </head>
+    <body>
+        <!-- Billing Adress -->
+        <section class="container-body">
+            <section class="container-page">
+                <div class="container-flex">
+                    <div class="billing-adress">
+                        <p class="Para1">Billing Address</p>
+                        <br>
+                        <br>
+                        <form name="adress" action="" method="POST">
+                            <p><i class="fa fa-user-circle"></i> Nome Completo</p>
+                            <input type="text" name="name" id="name" placeholder="Coloque o seu nome completo" autocomplete="true" autofocus="1" required /> <br>
+                            <p><i class="fas fa-envelope"></i> Email</p>
+                            <input type="email" name="email" id="email" placeholder="Coloque o seu e-mail" autocomplete="true" autofocus="1" required /> <br>
+                            <p><i class="far fa-address-card"></i> Endereço</p> 
+                            <input type="text" name="address" id="address" placeholder="Coloque o seu endereço" autocomplete="true" autofocus="1" required /> <br>
+                            <p><i class="fas fa-city"></i> Cidade</p>
+                            <input type="text" name="city" id="city" placeholder="Coloque a sua cidade" autocomplete="true" autofocus="1" required /> <br>
+                            <section class="container-zip">
+                                <div>
+                                    <p>Estado</p> 
+                                    <input type="text" name="state" id="state" placeholder="Ex.: PR, RS" autocomplete="true" autofocus="1" required /> 
+                                </div>
+                                <div>
+                                    <p>CEP</p> 
+                                    <input type="text" name="cep" id="cep" placeholder="99999-99" maxlength="9" autocomplete="true" autofocus="1" required />
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                    <div class="payment">
+                        <p class="Para1">Payment</p>
+                        <br>
+                        <br>
+                        <p>Bandeiras aceitas</p>
+                        <!-- Trocar a imagem depois -->
+                        <i class="fab fa-cc-visa fa-2x"></i>
+                        <i class="fab fa-cc-amex fa-2x"></i>
+                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                        <i class="fab fa-cc-discover fa-2x"></i>
+                        <br>
+                        <br>
+                        <form name="payment" action="" method="POST">
+                            <p class="cartao_nome">Nome no cartão</p>
+                            <input type="text" name="card_name" id="card_name" placeholder="Coloque o nome do cartão" autocomplete="true" required /> <br>
+                            <p class="cartao_numero">Número do cartão</p> 
+                            <input type="text" name="card_number" id="card_number" placeholder="Coloque o número do cartão" autocomplete="true" required /> <br>
+                            <p class="cartao_mes">Mês de expiração</p> 
+                            <input type="text" name="card_expm" id="card_expm" placeholder="Coloque o mês de expiração" autocomplete="true" required /> <br>
+                            <section class="container-cvv">
+                                <div>
+                                    <p class="cartao_ano">Ano de expiração</p> 
+                                    <input type="text" name="card_expy" id="card_expy" placeholder="2024" autocomplete="true" required /> 
+                                </div>
+                                <div>
+                                    <p class="cartao_cvv">CVV</p>
+                                    <input type="text" name="card_cvv" id="card_cvv" placeholder="352" autocomplete="true" required /> 
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+                <section class="button">
+                    <div class="buttons">
+                        <br>
+                        <form method="GET">
+                            <input name="end" type="checkbox" id="end"> Endereço de entrega igual ao de cobrança <br>
+                            <button class="button-final" onclick="capturar()" formaction="index2.html" type="submit"><p class="Para2">Continue para finalizar a compra</p></button>
+                        </form>
+                    </div>
+                </section>
+            </section>
+            <section class="container-cart">
+                <input type="text" id="produto">
+                <button id="btn">Cadastrar Produto</button>
+                <div class="container-flex">
+                    <div class="cart">
+                        <ul class="lista">
+                            <h1>Cart</h1>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <script lang="javascript">
+            /* Lista de carrinhos e tals */
+                var $lista = document.querySelector('ul');
+                var $produto = document.querySelector('#produto');
+                var $botao = document.querySelector('#btn');
+
+                $botao.addEventListener('click', addProduto);
+
+                function addProduto() 
+                {     
+                    var item = '<li>' + $produto.value + '</li>';
+                    $lista.innerHTML += item;	
+                    $produto.value = '';
+                    $produto.focus();
+                }
+
+                $produto.addEventListener('keyup', function(e) {
+                    console.log(e.keyCode);
+                    if (e.keyCode === 13)
+                    {
+                        addProduto()
+                    }
+                })
+        </script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

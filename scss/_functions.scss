@@ -1,0 +1,10 @@
+/*Functions*/
+@mixin flexCenter($justify-content, $flex-direction) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+}

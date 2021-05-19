@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./scss/style2.css" />
+        <title>Dados</title>
+    </head>
+    <body>
+        <div id="write">
+            <p>As suas informações são:</p>
+
+            <script lang="javascript">
+                if(typeof(Storage)!="undefined")
+                {
+                        var $name = localStorage.getItem('name');
+                        var email = localStorage.getItem('email');
+                        var address = localStorage.getItem('address');
+                        var city = localStorage.getItem('city');
+                        var state = localStorage.getItem('state');
+                        var cep = localStorage.getItem('cep');
+                        var cardname = localStorage.getItem('cardname');
+                        var cardnumber = localStorage.getItem('cardnumber');
+                        var cardexpm = localStorage.getItem('cardexpm');
+                        var cardexpy = localStorage.getItem('cardexpy');
+                        var cardcvv = localStorage.getItem('cardcvv');
+
+                        document.write("Nome: " + $name);
+                        document.write("<br>Email: " + email);
+                        document.write("<br>Endereço: " + address);
+                        document.write("<br>Cidade: " + city);
+                        document.write("<br>Estado: " + state);
+                        document.write("<br>CEP: " + cep);
+                        document.write("<br>Nome Cartão: " + cardname);
+                        document.write("<br>Numero Cartão: " + cardnumber);
+                        document.write("<br>Mês Expiração: " + cardexpm);
+                        document.write("<br>Ano Expiração: " + cardexpy);
+                        document.write("<br>CVV: " + cardcvv);
+                }else {
+                    document.write("Sem suporte ao Web Storage")
+                }
+            </script>
+        </div>
+    </body>
+</html>
