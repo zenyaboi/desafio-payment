@@ -3,13 +3,13 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .button {
@@ -29,12 +29,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-top: 10px;
 }
 
@@ -43,12 +43,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .container-cart {
@@ -85,12 +85,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .container-cvv {
@@ -98,12 +98,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .lista {
@@ -129,7 +129,8 @@ p {
   color: white;
 }
 
-input[type=text], select {
+input[type="text"],
+select {
   width: 95%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -137,10 +138,11 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input[type=email], select {
+input[type="email"],
+select {
   width: 95%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -148,10 +150,11 @@ input[type=email], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input[name=state], select {
+input[name="state"],
+select {
   width: 90%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -159,10 +162,11 @@ input[name=state], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input[name=cep], select {
+input[name="cep"],
+select {
   width: 90%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -170,10 +174,11 @@ input[name=cep], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input[name=card_expy], select {
+input[name="card_expy"],
+select {
   width: 90%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -181,10 +186,11 @@ input[name=card_expy], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input[name=card_cvv], select {
+input[name="card_cvv"],
+select {
   width: 90%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -192,6 +198,6 @@ input[name=card_cvv], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
